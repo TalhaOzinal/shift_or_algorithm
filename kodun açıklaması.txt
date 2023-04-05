@@ -1,0 +1,26 @@
+Shift-Or algoritması, bir metinde belirli bir kelime ve ya kelime grubunun var olup olmadığını bulmak için kullanılan bir algoritmadır. Bu algoritmanın matematiksel analizi, şöyle özetlenebilir:
+
+
+1)Kelime ve ya kelime grubunun önişleme işlemi gerçekleştirilir. Bu işlem sırasında, kelime ve ya kelime grubundaki her karakter için bir bit dizisi oluşturulur ve bu bit dizileri, kelime ve ya kelime grubunun içindeki tekrarlanan karakterleri işaretlemek için kullanılır.
+
+2)Metin üzerinde gezinerek, her karakter için kelime ve ya kelime grubunun bit dizisi ile karşılaştırma yapılır. Eğer bit dizisi eşleşirse, kelime ve ya kelime grubunun metinde var olduğu tespit edilir.
+
+3)Eğer eşleşme yoksa, bir kaydırma işlemi gerçekleştirilir. Bu işlem sırasında, metindeki sonraki karakter kelime ve ya kelime grubunun başlangıcına kaydırılır ve işlem yeniden başlatılır.
+
+
+Shift-Or algoritmasının asimptotik analizi, kelime ve ya kelime grubunun uzunluğuna (n) ve metnin uzunluğuna (m) bağlıdır. En kötü durumda, algoritmanın çalışma zamanı O(mn) olabilir. Ancak, tipik olarak algoritma daha hızlı çalışır ve ortalama çalışma zamanı O(m + n) dir. Bu, algoritmanın uzun metinlerde ve kısa kelime ve ya kelime gruplarında oldukça etkili olduğu anlamına gelir.
+
+
+
+Shift or Algorithm algoritmasını kullandığımız bu kod, verilen dosyada belirtilen anahtar kelimenin kaç kez geçtiğini bulur. Kod içerisinde arama adında bir fonksiyon tanımladık. Fonksiyon içerisinde dosya_adi olarak sizde bulunan dosyanın adı ve a_kelime olarak aranacak olan anahtar kelimelerin listesi tutulmaktadır. width open fonksiyonu ile dosya okutulur. Sonrasında altındaki döngüler ile kelimeler döngüye alınır ve metin içerisinde arama işlemi başlar. if kelime.lower() == a_kelime.lower(): kısmında metindeki kelime ve anahtar kelimenin birbirini tutup tutmadığı kontrol edilir. Eğer kelimeler birbirini tutuyorsa adet sayısı bir arttırılır. Altta ki son for döngüsünde ise sizde verilen text dosyasının içerisinde aramış olduğunuz kelime ve ya kelime gruplarının kaç kez geçtiği ekrana yazdırılır.
+
+
+Benim çalışmam da alice_in_wonderland.txt dosyasındaki metinde upon, sigh, Dormouse, jury-box ve swim kelimelerini arattık. Arama sonucunda;
+
+'upon' kelimesi 26 kez geçiyor.
+'sigh' kelimesi 0 kez geçiyor.
+'Dormouse' kelimesi 23 kez geçiyor.
+'jury-box' kelimesi 1 kez geçiyor.
+'swim' kelimesi 1 kez geçiyor.
+
+çıktısını aldık.
